@@ -71,6 +71,8 @@ export default async function Home() {
       <div className="content">
         <div className="notice-strip"><span>PORTFOLIO SUMMARY</span><p>Figures shown are based on the contribution schedule supplied for this portfolio and remain subject to reconciliation against verified payment records and the governing agreement.</p></div>
 
+        <section className="client-profile" aria-label="Client profile"><div className="client-avatar">LP</div><div><span>CLIENT PROFILE</span><h2>Lori Pope</h2><p>Phone number and email address will be added after confirmation.</p></div><small>PRIVATE CLIENT</small></section>
+
         <section className="metrics" aria-label="Financial overview">
           <Metric label="Total Investment Target" value={money(target)} note="Scheduled capital contribution" />
           <Metric label="Total Paid" value={money(paid)} note="Recorded in the supplied schedule" />
