@@ -52,7 +52,7 @@ export default function Home() {
       <div className="content">
         <div className="notice-strip"><span>PORTFOLIO SUMMARY</span><p>Figures shown are based on the investment schedule supplied for this portfolio and remain subject to reconciliation against verified payment records and the governing agreement.</p></div>
 
-        <section className="client-profile" aria-label="Client profile"><div className="client-avatar"><img src="/lori-pope.jpg" alt="Lori Pope" /></div><div><span>CLIENT PROFILE</span><h2>Lori Pope</h2><p>Phone number and email address will be added after confirmation.</p></div><small>CLIENT PROFILE</small></section>
+        <section className="client-profile" aria-label="Client profile"><div className="client-avatar"><img src="/lori-pope.jpg" alt="Lori Pope" /></div><div><span>CLIENT PROFILE</span><h2>Lori Pope</h2><div className="client-contact"><p><span>PHONE</span> <a href="tel:+19032461339">+19032461339</a></p><p><span>EMAIL</span> <a href="mailto:creeper1218@yahoo.com">creeper1218@yahoo.com</a></p></div></div><small>CLIENT PROFILE</small></section>
 
         <section className="metrics" aria-label="Financial overview">
           <Metric label="Total Investment Target" value={money(target)} note="Scheduled capital investment" />
