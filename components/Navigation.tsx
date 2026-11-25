@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const items = [
   ["Overview", "overview"],
-  ["Contribution History", "contribution-history"],
+  ["Investment History", "investment-history"],
   ["Outstanding Balance", "outstanding-balance"],
   ["Investment Returns", "investment-returns"],
   ["Maturity Information", "maturity-information"],
