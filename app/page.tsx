@@ -109,7 +109,7 @@ export default function Home() {
           <SectionTitle number="05" title="Merchandise Portfolio" />
           <p className="section-intro">A snapshot of established names in the Western apparel and merchandise category.</p>
           <div className="brands">
-            <article className="brand-card"><img src="https://contents.mediadecathlon.com/m14315772/k%24876567a4c884ed20b056a08ada1a8d46/picture.jpg?f=3000x0&format=auto" alt="Blue Wrangler denim jeans" loading="lazy" /><div className="brand-name">WRANGLER<small>DENIM & WESTERN APPAREL</small></div></article>
+            <article className="brand-card"><img src="/wrangler-replacement.jpg" alt="Blue Wrangler denim jeans" loading="lazy" /><div className="brand-name">WRANGLER<small>DENIM & WESTERN APPAREL</small></div></article>
             <article className="brand-card"><img src="https://www.bootcountryonline.com/cdn/shop/files/DSC_0652.jpg?v=1738017382&width=1946" alt="Brown embroidered western cowboy boots" loading="lazy" /><div className="brand-name">GOLDEN WEST BOOTS<small>WESTERN FOOTWEAR</small></div></article>
             <article className="brand-card"><img src="https://www.charlie1horsehats.com/cdn/shop/files/CFTCMP-RB4225.png?v=1732217979&width=1080" alt="Charlie 1 Horse charcoal western hat" loading="lazy" /><div className="brand-name">CHARLIE 1 HORSE<small>WESTERN HATS</small></div></article>
           </div>
