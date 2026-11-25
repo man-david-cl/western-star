@@ -95,7 +95,6 @@ export default function Home() {
             <div><span>PROJECTED INTEREST</span><b>{money(interest)}</b></div>
             <div className="highlight"><span>TOTAL PROJECTED PAYOUT</span><b>{money(payout)}</b></div>
           </div>
-          <p className="hint">The projected interest is calculated once at 15% of the full {money(target)} capital target. This is a projection, not a guarantee of payment or return.</p>
         </section>
 
         <section className="section" id="maturity-information">
