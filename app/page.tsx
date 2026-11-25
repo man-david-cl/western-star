@@ -1,5 +1,3 @@
-import { cookies } from "next/headers";
-import { verifyAccessToken } from "@/lib/access";
 import Navigation from "@/components/Navigation";
 
 export const dynamic = "force-dynamic";
@@ -21,24 +19,7 @@ const money = (amount: number) =>
     maximumFractionDigits: 0,
   }).format(amount);
 
-export default async function Home() {
-  const cookieStore = await cookies();
-  const accessToken = cookieStore.get("ws_access")?.value;
-  const access = accessToken ? verifyAccessToken(accessToken) : null;
-
-  if (!access) {
-    return (
-      <main className="locked-screen">
-        <div className="locked-card">
-          <span className="brand-mark">W</span>
-          <p className="eyebrow">WESTERN STAR · PRIVATE PORTFOLIO</p>
-          <h1>This portfolio is private.</h1>
-          <p>To view Lori Pope’s portfolio, open the secure access link that was sent to you.</p>
-          <small>For assistance, contact the portfolio administrator.</small>
-        </div>
-      </main>
-    );
-  }
+export default function Home() {
 
   const target = investments.reduce((sum, row) => sum + row.expected, 0);
   const paid = investments.reduce((sum, row) => sum + row.paid, 0);
@@ -54,7 +35,7 @@ export default async function Home() {
           <span className="brand-mark">W</span>
           <span><b>WESTERN STAR</b><small>MERCHANDISE CAPITAL PORTFOLIO</small></span>
         </a>
-        <span className="private-tag">PRIVATE CLIENT PORTAL</span>
+        <span className="private-tag">CLIENT PORTFOLIO</span>
       </header>
 
       <section className="hero" id="overview">
@@ -71,7 +52,7 @@ export default async function Home() {
       <div className="content">
         <div className="notice-strip"><span>PORTFOLIO SUMMARY</span><p>Figures shown are based on the investment schedule supplied for this portfolio and remain subject to reconciliation against verified payment records and the governing agreement.</p></div>
 
-        <section className="client-profile" aria-label="Client profile"><div className="client-avatar">LP</div><div><span>CLIENT PROFILE</span><h2>Lori Pope</h2><p>Phone number and email address will be added after confirmation.</p></div><small>PRIVATE CLIENT</small></section>
+        <section className="client-profile" aria-label="Client profile"><div className="client-avatar">LP</div><div><span>CLIENT PROFILE</span><h2>Lori Pope</h2><p>Phone number and email address will be added after confirmation.</p></div><small>CLIENT PROFILE</small></section>
 
         <section className="metrics" aria-label="Financial overview">
           <Metric label="Total Investment Target" value={money(target)} note="Scheduled capital investment" />
@@ -82,7 +63,7 @@ export default async function Home() {
 
         <section className="section" id="investment-history">
           <SectionTitle number="01" title="Investment History" />
-          <p className="section-intro">Monthly investment investment schedule for July to December 2026.</p>
+          <p className="section-intro">Monthly investment schedule for July to December 2026.</p>
           <div className="table-wrap"><table><thead><tr><th>Month</th><th>Expected</th><th>Paid</th><th>Balance</th><th>Status</th></tr></thead>
             <tbody>{investments.map((row) => {
               const balance = Math.max(row.expected - row.paid, 0);
@@ -96,7 +77,7 @@ export default async function Home() {
         <section className="section" id="outstanding-balance">
           <SectionTitle number="02" title="Outstanding Balance" />
           <div className="balance-card">
-            <div><span className="eyebrow">FINAL Investment SETTLEMENT</span><strong>{money(outstanding)}</strong><p>Proposed settlement deadline: December 7, 2026.</p></div>
+            <div><span className="eyebrow">FINAL INVESTMENT SETTLEMENT</span><strong>{money(outstanding)}</strong><p>Proposed settlement deadline: December 7, 2026.</p></div>
             <div className="balance-breakdown">
               <div><span>October balance</span><b>{money(150)}</b></div>
               <div><span>November investment</span><b>{money(350)}</b></div>
@@ -142,7 +123,7 @@ export default async function Home() {
           <div className="empty-state"><span>PORTFOLIO ADMINISTRATOR</span><p>Administrator name, business address, telephone number and email will be displayed here once confirmed.</p></div>
         </section>
 
-        <footer><b>WESTERN STAR</b><span>MERCHANDISE CAPITAL PORTFOLIO</span><p>Privacy notice: This portfolio contains private financial information and is intended only for the authorized recipient. Please do not forward the access link. Contact the portfolio administrator if you believe the link has been shared without permission.</p><small>© 2026 WESTERN STAR. All rights reserved.</small></footer>
+        <footer><b>WESTERN STAR</b><span>MERCHANDISE CAPITAL PORTFOLIO</span><p>Public access notice: This portfolio page can be opened by anyone who has its website address. Do not publish or share the address if you do not want these financial details viewed by others.</p><small>© 2026 WESTERN STAR. All rights reserved.</small></footer>
       </div>
     </main>
   );
