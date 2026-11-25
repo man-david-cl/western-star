@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-const contributions = [
+const investments = [
   { month: "July", expected: 200, paid: 200 },
   { month: "August", expected: 500, paid: 500 },
   { month: "September", expected: 200, paid: 200 },
@@ -40,8 +40,8 @@ export default async function Home() {
     );
   }
 
-  const target = contributions.reduce((sum, row) => sum + row.expected, 0);
-  const paid = contributions.reduce((sum, row) => sum + row.paid, 0);
+  const target = investments.reduce((sum, row) => sum + row.expected, 0);
+  const paid = investments.reduce((sum, row) => sum + row.paid, 0);
   const outstanding = Math.max(target - paid, 0);
   const interest = Math.round(target * 0.15);
   const payout = target + interest;
@@ -62,29 +62,29 @@ export default async function Home() {
           <div>
             <p className="eyebrow">CLIENT PORTFOLIO · JULY — DECEMBER 2026</p>
             <h1>Welcome, Lori Pope.</h1>
-            <p className="hero-copy">A clear view of your contributions, remaining balance and projected maturity benefits.</p>
+            <p className="hero-copy">A clear view of your investments, remaining balance and projected maturity benefits.</p>
           </div>
           <div className="period"><span>INVESTMENT PERIOD</span><b>JUL — DEC</b><small>2026</small></div>
         </div>
       </section>
 
       <div className="content">
-        <div className="notice-strip"><span>PORTFOLIO SUMMARY</span><p>Figures shown are based on the contribution schedule supplied for this portfolio and remain subject to reconciliation against verified payment records and the governing agreement.</p></div>
+        <div className="notice-strip"><span>PORTFOLIO SUMMARY</span><p>Figures shown are based on the investment schedule supplied for this portfolio and remain subject to reconciliation against verified payment records and the governing agreement.</p></div>
 
         <section className="client-profile" aria-label="Client profile"><div className="client-avatar">LP</div><div><span>CLIENT PROFILE</span><h2>Lori Pope</h2><p>Phone number and email address will be added after confirmation.</p></div><small>PRIVATE CLIENT</small></section>
 
         <section className="metrics" aria-label="Financial overview">
-          <Metric label="Total Investment Target" value={money(target)} note="Scheduled capital contribution" />
+          <Metric label="Total Investment Target" value={money(target)} note="Scheduled capital investment" />
           <Metric label="Total Paid" value={money(paid)} note="Recorded in the supplied schedule" />
-          <Metric label="Outstanding" value={money(outstanding)} note="Remaining scheduled contribution" />
+          <Metric label="Outstanding" value={money(outstanding)} note="Remaining scheduled investment" />
           <Metric label="Projected Interest" value={money(interest)} note="15% of full target capital" />
         </section>
 
         <section className="section" id="investment-history">
           <SectionTitle number="01" title="Investment History" />
-          <p className="section-intro">Monthly investment contribution schedule for July to December 2026.</p>
+          <p className="section-intro">Monthly investment investment schedule for July to December 2026.</p>
           <div className="table-wrap"><table><thead><tr><th>Month</th><th>Expected</th><th>Paid</th><th>Balance</th><th>Status</th></tr></thead>
-            <tbody>{contributions.map((row) => {
+            <tbody>{investments.map((row) => {
               const balance = Math.max(row.expected - row.paid, 0);
               const status = balance === 0 ? "Completed" : row.paid > 0 ? "Partially paid" : "Pending";
               return <tr key={row.month}><td>{row.month} 2026</td><td>{money(row.expected)}</td><td>{money(row.paid)}</td><td>{money(balance)}</td><td><span className={balance === 0 ? "status done" : row.paid > 0 ? "status partial" : "status pending"}>{status}</span></td></tr>;
@@ -96,11 +96,11 @@ export default async function Home() {
         <section className="section" id="outstanding-balance">
           <SectionTitle number="02" title="Outstanding Balance" />
           <div className="balance-card">
-            <div><span className="eyebrow">FINAL CONTRIBUTION SETTLEMENT</span><strong>{money(outstanding)}</strong><p>Proposed settlement deadline: December 7, 2026.</p></div>
+            <div><span className="eyebrow">FINAL Investment SETTLEMENT</span><strong>{money(outstanding)}</strong><p>Proposed settlement deadline: December 7, 2026.</p></div>
             <div className="balance-breakdown">
               <div><span>October balance</span><b>{money(150)}</b></div>
-              <div><span>November contribution</span><b>{money(350)}</b></div>
-              <div><span>December contribution</span><b>{money(350)}</b></div>
+              <div><span>November investment</span><b>{money(350)}</b></div>
+              <div><span>December investment</span><b>{money(350)}</b></div>
               <div className="balance-total"><span>Total outstanding</span><b>{money(outstanding)}</b></div>
             </div>
           </div>
@@ -121,7 +121,7 @@ export default async function Home() {
           <SectionTitle number="04" title="Maturity Information" />
           <div className="maturity">
             <div><span>PROPOSED MATURITY DATE</span><h3>January 31, 2027</h3></div>
-            <p>Projected maturity value: <strong>{money(payout)}</strong>. This comprises the original capital target and projected interest, subject to completion of contributions, final reconciliation and the terms of the signed agreement.</p>
+            <p>Projected maturity value: <strong>{money(payout)}</strong>. This comprises the original capital target and projected interest, subject to completion of investments, final reconciliation and the terms of the signed agreement.</p>
           </div>
         </section>
 
