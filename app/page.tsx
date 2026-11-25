@@ -114,7 +114,6 @@ export default function Home() {
             <article className="brand-card"><img src="https://www.bootcountryonline.com/cdn/shop/files/DSC_0652.jpg?v=1738017382&width=1946" alt="Brown embroidered western cowboy boots" loading="lazy" /><div className="brand-name">GOLDEN WEST BOOTS<small>WESTERN FOOTWEAR</small></div></article>
             <article className="brand-card"><img src="https://www.charlie1horsehats.com/cdn/shop/files/CFTCMP-RB4225.png?v=1732217979&width=1080" alt="Charlie 1 Horse charcoal western hat" loading="lazy" /><div className="brand-name">CHARLIE 1 HORSE<small>WESTERN HATS</small></div></article>
           </div>
-          <p className="hint">Images are illustrative product references. Brand names are included for industry reference only; no sponsorship, endorsement or commercial partnership is implied.</p>
         </section>
 
         <section className="section" id="investment-documents">
