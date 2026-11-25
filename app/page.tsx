@@ -120,11 +120,6 @@ export default function Home() {
           <div className="empty-state"><span>DOCUMENT CENTRE</span><p>Signed agreements, verified payment receipts and account statements will be added here once secure document storage has been configured. No documents are currently represented as uploaded.</p></div>
         </section>
 
-        <section className="section" id="contact-information">
-          <SectionTitle number="07" title="Contact Information" />
-          <div className="empty-state"><span>PORTFOLIO ADMINISTRATOR</span><p>Administrator name, business address, telephone number and email will be displayed here once confirmed.</p></div>
-        </section>
-
         <footer><b>WESTERN STAR</b><span>MERCHANDISE CAPITAL PORTFOLIO</span><small>© 2026 WESTERN STAR. All rights reserved.</small></footer>
       </div>
     </main>
