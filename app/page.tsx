@@ -125,7 +125,7 @@ export default function Home() {
           <div className="empty-state"><span>PORTFOLIO ADMINISTRATOR</span><p>Administrator name, business address, telephone number and email will be displayed here once confirmed.</p></div>
         </section>
 
-        <footer><b>WESTERN STAR</b><span>MERCHANDISE CAPITAL PORTFOLIO</span><p>Public access notice: This portfolio page can be opened by anyone who has its website address. Do not publish or share the address if you do not want these financial details viewed by others.</p><small>© 2026 WESTERN STAR. All rights reserved.</small></footer>
+        <footer><b>WESTERN STAR</b><span>MERCHANDISE CAPITAL PORTFOLIO</span><small>© 2026 WESTERN STAR. All rights reserved.</small></footer>
       </div>
     </main>
   );
