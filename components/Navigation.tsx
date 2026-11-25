@@ -10,7 +10,6 @@ const items = [
   ["Maturity Information", "maturity-information"],
   ["Merchandise Portfolio", "merchandise-portfolio"],
   ["Investment Documents", "investment-documents"],
-  ["Contact Information", "contact-information"],
 ];
 
 export default function Navigation() {
