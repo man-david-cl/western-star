@@ -107,7 +107,6 @@ export default function Home() {
 
         <section className="section" id="merchandise-portfolio">
           <SectionTitle number="05" title="Merchandise Portfolio" />
-          <p className="section-intro">A snapshot of established names in the Western apparel and merchandise category.</p>
           <div className="brands">
             <article className="brand-card"><img src="/wrangler-replacement.jpg" alt="Blue Wrangler denim jeans" loading="lazy" /><div className="brand-name">WRANGLER<small>DENIM & WESTERN APPAREL</small></div></article>
             <article className="brand-card"><img src="https://www.bootcountryonline.com/cdn/shop/files/DSC_0652.jpg?v=1738017382&width=1946" alt="Brown embroidered western cowboy boots" loading="lazy" /><div className="brand-name">GOLDEN WEST BOOTS<small>WESTERN FOOTWEAR</small></div></article>
