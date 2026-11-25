@@ -52,7 +52,7 @@ export default function Home() {
       <div className="content">
         <div className="notice-strip"><span>PORTFOLIO SUMMARY</span><p>Figures shown are based on the investment schedule supplied for this portfolio and remain subject to reconciliation against verified payment records and the governing agreement.</p></div>
 
-        <section className="client-profile" aria-label="Client profile"><div className="client-avatar">LP</div><div><span>CLIENT PROFILE</span><h2>Lori Pope</h2><p>Phone number and email address will be added after confirmation.</p></div><small>CLIENT PROFILE</small></section>
+        <section className="client-profile" aria-label="Client profile"><div className="client-avatar"><img src="/lori-pope.jpg" alt="Lori Pope" /></div><div><span>CLIENT PROFILE</span><h2>Lori Pope</h2><p>Phone number and email address will be added after confirmation.</p></div><small>CLIENT PROFILE</small></section>
 
         <section className="metrics" aria-label="Financial overview">
           <Metric label="Total Investment Target" value={money(target)} note="Scheduled capital investment" />
@@ -116,7 +116,7 @@ export default function Home() {
 
         <section className="section" id="investment-documents">
           <SectionTitle number="06" title="Investment Documents" />
-          <div className="empty-state"><span>DOCUMENT CENTRE</span><p>Signed agreements, verified payment receipts and account statements will be added here once secure document storage has been configured. No documents are currently represented as uploaded.</p></div>
+          <div className="document-viewer"><div className="document-viewer-head"><span>WESTERN STAR INVESTMENT AND MATURITY-RETURN AGREEMENT</span><small>3-PAGE AGREEMENT · VIEW ON THIS PAGE</small></div><iframe src="/western-star-investment-agreement.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH" title="Western Star Investment and Maturity-Return Agreement" loading="lazy" /></div>
         </section>
 
         <footer><b>WESTERN STAR</b><span>MERCHANDISE CAPITAL PORTFOLIO</span><small>© 2026 WESTERN STAR. All rights reserved.</small></footer>
