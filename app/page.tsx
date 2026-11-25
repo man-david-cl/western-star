@@ -80,9 +80,9 @@ export default async function Home() {
           <Metric label="Projected Interest" value={money(interest)} note="15% of full target capital" />
         </section>
 
-        <section className="section" id="contribution-history">
-          <SectionTitle number="01" title="Contribution History" />
-          <p className="section-intro">Monthly contribution schedule for July to December 2026.</p>
+        <section className="section" id="investment-history">
+          <SectionTitle number="01" title="Investment History" />
+          <p className="section-intro">Monthly investment contribution schedule for July to December 2026.</p>
           <div className="table-wrap"><table><thead><tr><th>Month</th><th>Expected</th><th>Paid</th><th>Balance</th><th>Status</th></tr></thead>
             <tbody>{contributions.map((row) => {
               const balance = Math.max(row.expected - row.paid, 0);
