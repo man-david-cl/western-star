@@ -7,7 +7,7 @@ const investments = [
   { month: "July", expected: 200, paid: 200 },
   { month: "August", expected: 500, paid: 500 },
   { month: "September", expected: 200, paid: 200 },
-  { month: "October", expected: 300, paid: 150 },
+  { month: "October", expected: 300, paid: 300 },
   { month: "November", expected: 350, paid: 0 },
   { month: "December", expected: 350, paid: 0 },
 ];
@@ -79,7 +79,7 @@ export default function Home() {
           <div className="balance-card">
             <div><span className="eyebrow">FINAL INVESTMENT SETTLEMENT</span><strong>{money(outstanding)}</strong><p>Proposed settlement deadline: December 7, 2026.</p></div>
             <div className="balance-breakdown">
-              <div><span>October balance</span><b>{money(150)}</b></div>
+              <div><span>October balance</span><b>{money(0)}</b></div>
               <div><span>November investment</span><b>{money(350)}</b></div>
               <div><span>December investment</span><b>{money(350)}</b></div>
               <div className="balance-total"><span>Total outstanding</span><b>{money(outstanding)}</b></div>
